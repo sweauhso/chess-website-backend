@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins = {"http://localhost:3000", "http://localhost:3001", "https://your-vercel-frontend.vercel.app"})
 @RestController
 @RequestMapping("api/v1/contact")
 public class ContactController {
