@@ -13,7 +13,10 @@ public class WebConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**") // Allow all endpoints
-                        .allowedOrigins("http://localhost:3000") // Allow frontend origin
+                        .allowedOrigins(
+                            "http://localhost:3000", 
+                            "https://chess-website-frontend-iw7d5j6zb-sweauhsos-projects.vercel.app" // ✅ Ensure HTTPS
+                        ) 
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS") // Allow specific HTTP methods
                         .allowedHeaders("*") // Allow all headers
                         .allowCredentials(true); // Allow cookies and credentials if needed
